@@ -1,0 +1,17 @@
+<div class="example-container">
+  <mat-form-field appearance="fill" #lobbyForm (ngSubmit)="onSubmit()">
+    <mat-label>Enter your Lobby number</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="lobbyID" required />
+    <mat-error *ngIf="name.invalid">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+
+  <button
+    class="forwardBTN"
+    mat-fab
+    color="primary"
+    aria-label="Example icon button with a delete icon"
+    (click)="onSubmit()"
+  >
+    <mat-icon>send</mat-icon>
+  </button>
+</div>
